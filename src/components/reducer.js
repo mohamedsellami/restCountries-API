@@ -21,13 +21,13 @@ function reducer(state, action){
             }else{
                 return {
                 ...state,
-                countries: [...action.allCountries].filter((country) => country.region == action.region)
+                countries: [...action.allCountries].filter((country) => country.region === action.region)
                 }
             }
         case 'SEARCH':
             return{
                 ...state,
-                countries: [...action.allCountries].filter((country) => country.name.toLowerCase() == action.name.toLowerCase())
+                countries: [...action.allCountries].filter((country) => country.name.toLowerCase() === action.name.toLowerCase())
             }
         case 'GET_DETAILS':
             return{

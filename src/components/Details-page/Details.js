@@ -32,7 +32,7 @@ function Details() {
                 <button className="back-button" style={{...backgroundElements, ...color}}><KeyboardBackspaceIcon className="back-arrow" style={color}/> Back</button>
             </Link>
             <div className="details-container">
-                <img src={currentCountry?.flag}/>
+                <img src={currentCountry?.flag} alt=""/>
                 <div className="info">
                     <h3 style={color}>{ currentCountry?.name }</h3>
                     <div className="more-details">
@@ -56,7 +56,7 @@ function Details() {
                         <div className="border-countries">
                             {currentCountry?.borders.map((countryCode, i)=>(
                                 <Link to="/details" key={i}>
-                                    <span onClick={openDetails} style={{...backgroundElements, ...color}}>{allCountries.filter((country)=> country.alpha3Code == countryCode)[0].name}</span>
+                                    <span onClick={openDetails} style={{...backgroundElements, ...color}}>{allCountries.filter((country)=> country.alpha3Code === countryCode)[0].name}</span>
                                 </Link>
                             ))}
                         </div>
