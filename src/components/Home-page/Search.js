@@ -18,12 +18,12 @@ function Search() {
 
     useEffect(()=>{
         document.querySelector(".autoComplete").style.display = 'flex';
-        let suggetions = [...allCountries].filter((country) => country.name.substring(0, searchValue.length).toLowerCase() == searchValue.toLowerCase());
+        let suggetions = [...allCountries].filter((country) => country.name.substring(0, searchValue.length).toLowerCase() === searchValue.toLowerCase());
         setautoComplete(suggetions.map((country, i)=> <span onClick={handleSuggetion} style={color} key={i}>{country.name}</span>))
-        if(searchValue == "" || suggetions == []){
+        if(searchValue === "" || suggetions === []){
             document.querySelector(".autoComplete").style.display = 'none';
         }
-        if(isAutoComplete && suggetions != []){
+        if(isAutoComplete && suggetions !== []){
             search();
             document.querySelector(".autoComplete").style.display = 'none';
             setIsAutoComplete(false);

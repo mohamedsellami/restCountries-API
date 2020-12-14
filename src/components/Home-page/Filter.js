@@ -9,7 +9,7 @@ function Filter() {
 
     const showOptions = () =>{
         let elementTransform = document.querySelector(".filter .options").style.transform;
-        if(elementTransform === '' || elementTransform != 'translateY(0%)'){
+        if(elementTransform === '' || elementTransform !== 'translateY(0%)'){
             document.querySelector(".filter .options").style.transform = `translateY(0%)`;
         }else{
             document.querySelector(".filter .options").style.transform = `translateY(-150%)`;

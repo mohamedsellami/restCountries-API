@@ -19,7 +19,7 @@ function Countries() {
     }
 
     useEffect(()=>{
-        if(allCountries.length == 0){
+        if(allCountries.length === 0){
             fetch('https://restcountries.eu/rest/v2/all')
             .then(res => res.json())
             .then((result)=>{
@@ -55,7 +55,7 @@ function Countries() {
                 countries.map((country, i)=>(
                     <Link to="/details" key={i}>
                         <div className="country" onClick={openDetail(country.name)} style={backgroundElements}>
-                            <img src={country.flag}/>
+                            <img src={country.flag} alt=""/>
                             <div className="info">
                                 <h5 style={color}>{country.name}</h5>
                                 <p style={color}>Population: <span style={color}>{country.population}</span></p>
