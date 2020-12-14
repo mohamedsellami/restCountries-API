@@ -1,0 +1,73 @@
+.filter {
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.filter button {
+  background-color: white;
+  color: #202c37;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 6;
+  position: relative;
+}
+
+.filter button span {
+  margin-right: 10px;
+  color: #202c37;
+}
+
+.filter button .expand {
+  color: #202c37;
+}
+
+.filter .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid black;
+  position: relative;
+  z-index: 5;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-color: white;
+  color: #202c37;
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+  padding: 5px 0;
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
+}
+
+.filter .options span {
+  padding: 5px 0;
+  padding-left: 10px;
+}
+
+.filter .options span:hover {
+  background-color: rgba(165, 161, 161, 0.329);
+}
+/*# sourceMappingURL=Filter.css.map */

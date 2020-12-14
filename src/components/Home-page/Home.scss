@@ -1,0 +1,13 @@
+.control-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 5%;
+  padding-right: 4%;
+}
+
+@media screen and (max-width: 630px) {
+  .control-bar {
+    flex-direction: column;
+  }
+}
