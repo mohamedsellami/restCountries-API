@@ -36,7 +36,7 @@ function Countries() {
             }
             );
         }
-    }, [])
+    }, [allCountries])
 
   
     const background = {
