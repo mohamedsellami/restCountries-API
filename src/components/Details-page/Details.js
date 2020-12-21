@@ -26,6 +26,8 @@ function Details() {
         backgroundColor: dark ? 'hsl(209, 23%, 22%)' : 'hsl(0, 0%, 100%)'
     }
 
+    document.title = "Rest Countries | Details";
+    
     return (
         <div style={background}>
             <Link to="/">
