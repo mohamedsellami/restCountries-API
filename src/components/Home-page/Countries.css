@@ -83,7 +83,7 @@
 
 @media screen and (max-width: 665px) {
   .countries {
-    width: 300px;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=Countries.css.map */
