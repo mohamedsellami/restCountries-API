@@ -35,7 +35,8 @@ function Search() {
             type: 'SEARCH',
             allCountries: allCountries,
             name: searchValue
-        })
+        });
+        document.querySelector(".autoComplete").style.display = 'none';
     }
 
     const color = {
@@ -48,7 +49,7 @@ function Search() {
     return (
         <div className="search-input">
             <SearchIcon className="search-icon" onClick={search} style={color}/>
-            <input type="search" placeholder="Search for country..." value={searchValue} onChange={(e)=> setSearchValue(e.target.value)} style={{...backgroundElements, ...color}} />
+            <input type="search" placeholder="Search for country..." value={searchValue} onChange={(e)=> setSearchValue(e.target.value)} style={{...backgroundElements, ...color}} onKeyDown={(e)=> e.code === "Enter" ? search() : ""}/>
             <div className="autoComplete" style={{...backgroundElements}}>
                 {autoComplete}
             </div>
